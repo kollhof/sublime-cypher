@@ -1,4 +1,4 @@
 sublime-cypher
 ==============
 
-Syntax highlighting for Neo4j's Cypher query language in SublimeText2.
+Syntax highlighting for [Neo4j](http://www.neo4j.org)'s [Cypher](http://docs.neo4j.org/chunked/milestone/cypher-query-lang.html) query language in [SublimeText](http://www.sublimetext.com).
