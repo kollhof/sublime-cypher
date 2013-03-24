@@ -4,7 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>cypher</string>
+		<string>cql</string>
 	</array>
 	<key>name</key>
 	<string>Cypher</string>
