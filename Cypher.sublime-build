@@ -1,0 +1,5 @@
+{
+    "cmd": ["cypher", "${file}"],
+    "selector": "source.cypher",
+    "file_regex": "^File (.+):([0-9]+):([0-9]+)"
+}
