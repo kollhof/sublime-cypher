@@ -6,6 +6,20 @@ import urllib2
 import json
 
 
+def item_to_str(item):
+    if isinstance(item, dict):
+        data = json.dumps(item['data'])
+        id_ = item['self'].rsplit('/', 1)[1]
+
+        if 'type' in item:
+            return "[%s:%s %s]" % (
+                id_, item['type'], data)
+        else:
+            return "(%s %s)" % (id_, data)
+    else:
+        return str(item)
+
+
 def print_table(headers, items):
     column_widths = {}
     rows = []
@@ -16,7 +30,8 @@ def print_table(headers, items):
     for row in items:
         row = tuple(item_to_str(item) for item in row)
         for col_idx, data in enumerate(row):
-            column_widths[col_idx] = len(data)
+            col_width = column_widths[col_idx]
+            column_widths[col_idx] = max(col_width, len(data))
         rows.append(row)
 
     for row in rows:
@@ -69,20 +84,6 @@ def print_error(file_name, query, err):
         msg = format_exc()
 
     print msg
-
-
-def item_to_str(item):
-    if isinstance(item, dict):
-        data = json.dumps(item['data'])
-        id_ = item['self'].rsplit('/', 1)[1]
-
-        if 'type' in item:
-            return "[%s:%s %s]" % (
-                id_, item['type'], data)
-        else:
-            return "(%s %s)" % (id_, data)
-    else:
-        return str(item)
 
 
 def cypher(query, **args):
