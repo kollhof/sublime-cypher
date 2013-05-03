@@ -24,8 +24,8 @@ def print_table(headers, items):
     column_widths = {}
     rows = []
 
-    for col_idx in xrange(len(headers)):
-        column_widths[col_idx] = 0
+    for col_idx, header in enumerate(headers):
+        column_widths[col_idx] = len(header)
 
     for row in items:
         row = tuple(item_to_str(item) for item in row)
