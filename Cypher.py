@@ -34,21 +34,20 @@ def print_table(headers, items):
             column_widths[col_idx] = max(col_width, len(data))
         rows.append(row)
 
+    headers = [c.center(column_widths[i]) for i, c in enumerate(headers)]
+    lines = ['-' * column_widths[i] for i, c in enumerate(headers)]
+
+    lines = '+-' + '-+-'.join(lines) + '-+'
+
+    print lines
+    print '| ' + ' | '.join(headers) + ' |'
+    print lines
+
     for row in rows:
-        headers = [c.center(column_widths[i]) for i, c in enumerate(headers)]
-        lines = ['-' * column_widths[i] for i, c in enumerate(headers)]
+        fields = [c.ljust(column_widths[i]) for i, c in enumerate(row)]
+        print '| ' + ' | '.join(fields) + ' |'
 
-        lines = '+-' + '-+-'.join(lines) + '-+'
-
-        print lines
-        print '| ' + ' | '.join(headers) + ' |'
-        print lines
-
-        for row in rows:
-            fields = [c.ljust(column_widths[i]) for i, c in enumerate(row)]
-            print '| ' + ' | '.join(fields) + ' |'
-
-        print lines
+    print lines
 
     print "%d items returned" % len(rows)
 
