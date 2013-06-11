@@ -11,14 +11,14 @@ A plugin for working with [Neo4j](http://www.neo4j.org)'s [Cypher](http://docs.n
 * Select "Install Package"
 * Select "Cyper"
 
-The plugin will detect files ending in .cql as Cypher, optionally just select Cypher from the Syntax menu. 
+The plugin will detect files ending in `.cql` or `.cyp` as Cypher, optionally just select Cypher from the Syntax menu. 
 
 
 # Usage
 
 * Type a Cypher query into your editor
 * Run it by selecting the query and hitting (cmd+shift+r)
-* The results or error will be shown in the console, which can be opened by (ctrl+~)
+* The results or error will be shown in the console, which can be opened by (ctrl+`)
 * If no text is selected, all the text in the file is run as a single query
 
 

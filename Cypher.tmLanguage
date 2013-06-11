@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>cql</string>
+		<string>cyp</string>
 	</array>
 	<key>name</key>
 	<string>Cypher</string>
