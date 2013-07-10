@@ -1,5 +1,5 @@
 [
     {
-        "keys": ["super+shift+r"], "command": "cypher"
+        "keys": ["ctrl+shift+r"], "command": "cypher"
     }
 ]
