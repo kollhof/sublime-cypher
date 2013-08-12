@@ -17,7 +17,7 @@ The plugin will detect files ending in `.cql` or `.cyp` as Cypher, optionally ju
 # Usage
 
 * Type a Cypher query into your editor
-* Run it by selecting the query and hitting (cmd+shift+r)
+* Run it by selecting the query and hitting (cmd+shift+r on OSX, ctrl+shift+r on Windows)
 * The results or error will be shown in the console, which can be opened by (ctrl+`)
 * If no text is selected, all the text in the file is run as a single query
 
