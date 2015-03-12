@@ -9,7 +9,7 @@ A plugin for working with [Neo4j](http://www.neo4j.org)'s [Cypher](http://docs.n
 * See [Package Control usage](http://wbond.net/sublime_packages/package_control/usage)
 * Open the Command Pallete (cmd+shift+p)
 * Select "Install Package"
-* Select "Cyper"
+* Select "Cypher"
 
 The plugin will detect files ending in `.cql` or `.cyp` as Cypher, optionally just select Cypher from the Syntax menu. 
 
